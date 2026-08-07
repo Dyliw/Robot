@@ -1,0 +1,14 @@
+#define EMOTION_ENGINE_H
+#include "expression.h"
+#include "emotion_state.h"
+
+class EmotionEngine{
+    public:
+    EmotionEngine(EmotionState initialEmotion = EmotionState::HAPPY);
+    Expression getExpression();
+    void setEmotion(EmotionState newEmotion);
+
+    EmotionState getCurrentEmotion() const;
+    private:
+    EmotionState currentEmotion;
+};
